@@ -3,7 +3,8 @@
 A collection of functions for Lua, geared towards game development.
 
 This fork incorporates randomization from the LOVE engine's math library if
-available, and uses a local for random calls.
+available, uses a local for random calls, and adds a function for setting the
+seed for its randomizer.
 
 
 ## Installation
