@@ -32,7 +32,7 @@ local math_ceil = math.ceil
 local math_atan2 = math.atan2 or math.atan
 local math_sqrt = math.sqrt
 local math_abs = math.abs
-local math_random = math.random
+local math_random = love and love.math or math.random
 
 local noop = function()
 end
