@@ -32,7 +32,8 @@ local math_ceil = math.ceil
 local math_atan2 = math.atan2 or math.atan
 local math_sqrt = math.sqrt
 local math_abs = math.abs
-local math_random = love and love.math or math.random
+local math_random = love and love.math and love.math.random or math.random
+local math_randomseed = love and love.math and love.math.setRandomSeed or math.randomseed
 
 local noop = function()
 end
@@ -128,6 +129,11 @@ end
 
 function lume.vector(angle, magnitude)
   return math.cos(angle) * magnitude, math.sin(angle) * magnitude
+end
+
+
+function lume.seed(low, high)
+  return math_randomseed(low, high)
 end
 
 
