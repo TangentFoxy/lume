@@ -22,7 +22,7 @@
 -- SOFTWARE.
 --
 
-local lume = { _version = "2.3.0" }
+local lume = { _version = "2.4.0-Guard13007-fork" }
 
 local pairs, ipairs = pairs, ipairs
 local type, assert, unpack = type, assert, unpack or table.unpack
