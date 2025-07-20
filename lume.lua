@@ -1,7 +1,7 @@
 --
 -- lume
 --
--- Copyright (c) 2018 rxi
+-- Copyright (c) 2020 rxi
 --
 -- Permission is hereby granted, free of charge, to any person obtaining a copy of
 -- this software and associated documentation files (the "Software"), to deal in
@@ -165,7 +165,7 @@ end
 
 
 function lume.isarray(x)
-  return (type(x) == "table" and x[1] ~= nil) and true or false
+  return type(x) == "table" and x[1] ~= nil
 end
 
 
@@ -293,8 +293,8 @@ end
 
 
 function lume.reduce(t, fn, first)
+  local started = first ~= nil
   local acc = first
-  local started = first and true or false
   local iter = getiter(t)
   for _, v in iter(t) do
     if started then
